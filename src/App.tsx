@@ -12,6 +12,7 @@ import WellDone from './pages/WellDone';
 import TestResults from './pages/TestResults';
 import ProgressAnalytics from './pages/ProgressAnalytics';
 import Settings from './pages/Settings';
+import LevelComplete from './pages/LevelComplete';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <Route path="/results" element={<TestResults />} />
         <Route path="/analytics" element={<ProgressAnalytics />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/level-complete" element={<LevelComplete />} />
       </Routes>
     </BrowserRouter>
   );
