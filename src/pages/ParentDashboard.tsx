@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ParentDashboard: React.FC = () => {
   return (
@@ -171,6 +172,24 @@ const ParentDashboard: React.FC = () => {
           {/* Decorative Robot Shadow Icon */}
           <span className="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10 rotate-12">smart_toy</span>
         </section>
+
+        {/* Temporary Navigation */}
+        <div className="mt-10 p-4 bg-surface-container-low rounded-lg">
+          <h3 className="font-headline-sm text-headline-sm mb-4">Preview Pages</h3>
+          <ul className="flex flex-wrap gap-4">
+            <li><Link to="/" className="text-primary hover:underline">Splash Screen</Link></li>
+            <li><Link to="/parent" className="text-primary hover:underline">Parent Dashboard</Link></li>
+            <li><Link to="/child" className="text-primary hover:underline">Child Home</Link></li>
+            <li><Link to="/upload" className="text-primary hover:underline">Upload Word List</Link></li>
+            <li><Link to="/review" className="text-primary hover:underline">Review Word List</Link></li>
+            <li><Link to="/test-intro" className="text-primary hover:underline">Test Intro</Link></li>
+            <li><Link to="/test" className="text-primary hover:underline">Spelling Test</Link></li>
+            <li><Link to="/well-done" className="text-primary hover:underline">Well Done</Link></li>
+            <li><Link to="/results" className="text-primary hover:underline">Test Results</Link></li>
+            <li><Link to="/analytics" className="text-primary hover:underline">Progress Analytics</Link></li>
+            <li><Link to="/settings" className="text-primary hover:underline">Settings</Link></li>
+          </ul>
+        </div>
       </main>
       {/* BottomNavBar from JSON */}
       <nav className="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container dark:bg-surface-container-low shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-lg">
