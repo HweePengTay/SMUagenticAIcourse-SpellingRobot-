@@ -1,13 +1,14 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProgressAnalytics: React.FC = () => {
   return (
-    <body className="bg-background text-on-background min-h-screen pb-24">
+    <div className="bg-background text-on-background min-h-screen pb-24">
       {/* Top App Bar */}
       <header className="fixed top-0 w-full z-50 bg-surface dark:bg-on-surface shadow-sm flex justify-between items-center px-margin-mobile h-touch-target-min">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+          <div className="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-primary">
             <img
               alt="Parent Profile"
               className="w-full h-full object-cover"
@@ -206,26 +207,26 @@ const ProgressAnalytics: React.FC = () => {
       </main>
       {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container dark:bg-surface-container-low shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-lg">
-        <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors" href="#">
+        <Link to="/parent" className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors">
           <span className="material-symbols-outlined">home</span>
           <span className="font-label-caps text-label-caps">Home</span>
-        </a>
-        <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors" href="#">
+        </Link>
+        <Link to="/upload" className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors">
           <span className="material-symbols-outlined">cloud_upload</span>
           <span className="font-label-caps text-label-caps">Upload</span>
-        </a>
-        <a className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1" href="#">
+        </Link>
+        <Link to="/analytics" className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1">
           <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
             leaderboard
           </span>
           <span className="font-label-caps text-label-caps">Results</span>
-        </a>
-        <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors" href="#">
+        </Link>
+        <Link to="/settings" className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors">
           <span className="material-symbols-outlined">settings</span>
           <span className="font-label-caps text-label-caps">Settings</span>
-        </a>
+        </Link>
       </nav>
-    </body>
+    </div>
   );
 };
 

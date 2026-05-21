@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ParentDashboard: React.FC = () => {
   return (
-    <body className="bg-background text-on-surface min-h-screen pb-32">
+    <div className="bg-background text-on-surface min-h-screen pb-32">
       {/* TopAppBar from JSON */}
       <header className="fixed top-0 w-full z-50 bg-surface dark:bg-on-surface shadow-sm flex justify-between items-center px-margin-mobile h-touch-target-min">
         <div className="flex items-center gap-3">
@@ -188,35 +188,32 @@ const ParentDashboard: React.FC = () => {
             <li><Link to="/results" className="text-primary hover:underline">Test Results</Link></li>
             <li><Link to="/analytics" className="text-primary hover:underline">Progress Analytics</Link></li>
             <li><Link to="/settings" className="text-primary hover:underline">Settings</Link></li>
+            <li><Link to="/level-complete" className="text-primary hover:underline">Level Complete</Link></li>
           </ul>
         </div>
       </main>
       {/* BottomNavBar from JSON */}
       <nav className="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container dark:bg-surface-container-low shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-lg">
-        {/* Home (Active) */}
-        <a className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 active:scale-95 transition-all duration-150" href="#">
+        <Link to="/parent" className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 active:scale-95 transition-all duration-150">
           <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
             home
           </span>
           <span className="font-label-caps text-label-caps">Home</span>
-        </a>
-        {/* Upload */}
-        <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant active:scale-95 transition-all duration-150 rounded-xl" href="#">
+        </Link>
+        <Link to="/upload" className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant active:scale-95 transition-all duration-150 rounded-xl">
           <span className="material-symbols-outlined">cloud_upload</span>
           <span className="font-label-caps text-label-caps">Upload</span>
-        </a>
-        {/* Results */}
-        <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant active:scale-95 transition-all duration-150 rounded-xl" href="#">
+        </Link>
+        <Link to="/analytics" className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant active:scale-95 transition-all duration-150 rounded-xl">
           <span className="material-symbols-outlined">leaderboard</span>
           <span className="font-label-caps text-label-caps">Results</span>
-        </a>
-        {/* Settings */}
-        <a className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant active:scale-95 transition-all duration-150 rounded-xl" href="#">
+        </Link>
+        <Link to="/settings" className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant active:scale-95 transition-all duration-150 rounded-xl">
           <span className="material-symbols-outlined">settings</span>
           <span className="font-label-caps text-label-caps">Settings</span>
-        </a>
+        </Link>
       </nav>
-    </body>
+    </div>
   );
 };
 
